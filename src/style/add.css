@@ -1,0 +1,37 @@
+.add{
+    width: 70%;
+    margin-left: max(5vw,25px);
+    margin-top: 50px;
+    color: #6d6d6d;
+    font-size: 16px;
+}
+.add form{
+    gap: 20px;
+}
+.add-img-upload img{
+    width: 120px;
+    height: 50px;
+    background: black;
+}
+.add-product-name{
+    width: max(40%,280px);
+}
+.add-product-name input{
+    padding: 10px;
+}
+.add-product-name .rating{
+    display: flex;
+    gap: 30px;
+    
+}
+.add-product-name .rating input{
+    width: 175px;
+}
+.add-btn{
+    max-width: 120px;
+    border: none;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
