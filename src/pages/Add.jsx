@@ -2,18 +2,17 @@ import React, {  useState } from 'react'
 import { IoIosCloudUpload } from "react-icons/io";
 import '../style/add.css';
 import { Rating } from '@mui/material';
-import axios from 'axios'
+import axios from 'axios';
+import { toast } from 'react-toastify';
 const Add = () => {
 
   const url='http://localhost:3500';
   const [image,setimage]=useState(false);
   const [data,setdata]=useState({
     name:'',
-    rating:{
-      stars:0,
-      count:0
-    },
-    priceCents:''
+    ratingstars:0,
+      ratingcount:0,
+     priceCents:''
   });
 
   const onchangehandler=(e)=>{
@@ -22,38 +21,38 @@ const Add = () => {
     setdata(data=>({...data,[name]:value}))
   };
   const handleRatingChange = (event, newRating) => { // Handle rating changes
-    setdata((data) => ({ ...data, rating: { stars: newRating } }));
+    setdata((data) => ({ ...data, ratingstars: newRating }));
   };
 
   // No separate function needed for count update (explained below)
   const handleCountChange = (event) => {
     const newCount = parseInt(event.target.value, 10); // Parse to integer
     if (!isNaN(newCount) && newCount >= 0) { // Validate non-negative number
-      setdata((data) => ({ ...data, rating: { ...data.rating, count: newCount } }));
+      setdata((data) => ({ ...data, ratingcount: newCount  }));
     }
   };
  const onsubmithandler=async(e)=>{
 e.preventDefault();
 const formdata=new FormData();
 formdata.append('name',data.name);
-formdata.append('rating',{ stars: data.rating.stars, count: data.rating.count });
-formdata.append('priceCrnts',Number(data.priceCents));
+formdata.append('ratingstars',Number( data.ratingstars));
+formdata.append('ratingcount', Number(data.ratingcount));
+formdata.append('priceCents',Number(data.priceCents));
 formdata.append('image',image);
-const response=await axios.post(`${url}/api/it/add`);
+const response=await axios.post(`${url}/api/it/add`,formdata);
 if (response.data.success) {
   setdata(
     {
       name:'',
-      rating:{
-        stars:0,
-        count:0
-      },
-      priceCents:''
+      ratingstars:0,
+        ratingcount:0,
+       priceCents:''
     }
   )
    setimage(false)
-}
-
+   toast.success(response.data.message)
+}else
+toast.error(response.data.message)
  }
   return (
     <div className='add'>
@@ -77,17 +76,17 @@ if (response.data.success) {
             <p>product rating</p>
             <div className=" rating">
             <Rating
-            name="half-rating" defaultValue={2.5}
-            value={data.rating.stars}
+            name="ratingstars" defaultValue={2.5}
+            value={data.ratingstars}
             onChange={handleRatingChange}
             precision={0.5}
             size="small"
           />
                 <input
             onChange={handleCountChange}
-            value={data.rating.count}
+            value={data.ratingcount}
             type="number"
-            name="ratingCount" // Use a more descriptive name
+            name="ratingcount" // Use a more descriptive name
             placeholder="number of ratings"
           />
             </div>
