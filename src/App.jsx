@@ -11,6 +11,7 @@ import { ToastContainer} from 'react-toastify';
 
 
 const App = () => {
+  const url='http://localhost:3500';
   return (
     <div>
       <ToastContainer/>
@@ -19,9 +20,9 @@ const App = () => {
       <div className="app-content">
         <Sidebar/>
         <Routes>
-          <Route path='add' element={<Add/>}/>
-          <Route path='add' element={<List/>}/>
-          <Route path='add' element={<Orders/>}/>
+          <Route path='add' element={<Add url={url}/>}/>
+          <Route path='list' element={<List url={url}/>}/>
+          <Route path='orders' element={<Orders url={url}/>}/>
         </Routes>
       </div>
     </div>

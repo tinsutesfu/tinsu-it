@@ -4,9 +4,9 @@ import '../style/add.css';
 import { Rating } from '@mui/material';
 import axios from 'axios';
 import { toast } from 'react-toastify';
-const Add = () => {
+const Add = ({url}) => {
 
-  const url='http://localhost:3500';
+  
   const [image,setimage]=useState(false);
   const [data,setdata]=useState({
     name:'',
