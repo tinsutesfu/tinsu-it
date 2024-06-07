@@ -7,4 +7,34 @@
 }
 .add form{
     gap: 20px;
+<<<<<<< HEAD
+=======
+}
+.add-img-upload img{
+    width: 120px;
+    height: 50px;
+    background: black;
+}
+.add-product-name{
+    width: max(40%,280px);
+}
+.add-product-name input{
+    padding: 10px;
+}
+.add-product-name .rating{
+    display: flex;
+    gap: 30px;
+    
+}
+.add-product-name .rating input{
+    width: 175px;
+}
+.add-btn{
+    max-width: 120px;
+    border: none;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+>>>>>>> 125454c2ec3e057eb0426e88cd29e7ebd7b36455
 }
