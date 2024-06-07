@@ -1,0 +1,14 @@
+.navebar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 4%;
+    background: black;
+}
+.navebar .logo{
+    width: max(10%,80px);
+}
+.navebar .profile{
+    width: 40px;
+    color: white;
+}
