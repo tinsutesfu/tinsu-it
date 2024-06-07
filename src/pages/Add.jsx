@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import { IoIosCloudUpload } from "react-icons/io";
-import '../style/add.css'
-const Add = () => {
-  return (
-    <div className='add'>
-      <form  className="flex-col">
-        <div className="add-img-upload flex-col">
-            <p>upload image</p>
-            <label htmlFor='image'>
-                <span><IoIosCloudUpload /></span>
-            </label>
-            <input type="file" id="image" hidden required />
-        </div>
-        <div className="add-product-name flex-col">
-            <p>product name</p>
-            <input type="text" name='name' placeholder='product name'/>
-        </div>
-        <div className="add-product-name flex-col">
-            <p>product rating</p>
-            <div className="flex-col">
-                <input type="number" name='rating.stars' placeholder='rating stars'/>
-                <input type="number" name='rating.count' placeholder='rating count'/>
-=======
 import React, {  useState } from 'react'
 import { IoIosCloudUpload } from "react-icons/io";
 import '../style/add.css';
@@ -114,17 +89,12 @@ toast.error(response.data.message)
             name="ratingcount" // Use a more descriptive name
             placeholder="number of ratings"
           />
->>>>>>> 125454c2ec3e057eb0426e88cd29e7ebd7b36455
             </div>
             
         </div>
         <div className="add-product-name flex-col">
             <p>product price</p>
-<<<<<<< HEAD
-           <input type="number" name='price' placeholder='pricecents'/>
-=======
            <input onChange={onchangehandler} value={data.priceCents} type="number" name='priceCents' placeholder='pricecents'/>
->>>>>>> 125454c2ec3e057eb0426e88cd29e7ebd7b36455
             </div>
             <button type='submit' className="add-btn">add</button>
       </form>

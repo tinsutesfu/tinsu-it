@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-
-const List = () => {
-  return (
-    <div>
-      
-=======
 import React, { useEffect } from 'react'
 import { useState } from 'react';
 import '../style/list.css';
@@ -58,7 +50,6 @@ const response=await axios.post(`${url}/api/it/remove`,{id:itId})
           })
         }
       </div>
->>>>>>> 125454c2ec3e057eb0426e88cd29e7ebd7b36455
     </div>
   )
 }

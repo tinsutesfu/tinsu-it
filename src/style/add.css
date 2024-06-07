@@ -7,8 +7,6 @@
 }
 .add form{
     gap: 20px;
-<<<<<<< HEAD
-=======
 }
 .add-img-upload img{
     width: 120px;
@@ -36,5 +34,4 @@
     background-color: black;
     color: white;
     cursor: pointer;
->>>>>>> 125454c2ec3e057eb0426e88cd29e7ebd7b36455
 }
