@@ -4,6 +4,8 @@
     align-items: center;
     padding: 8px 4%;
     background: black;
+    position: fixed;
+    width: 100%;
 }
 .navebar .logo{
     width: max(10%,80px);

@@ -2,10 +2,13 @@
     width: 180px;
     min-height: 100vh;
     border: 1.5px solid #a9a9a9;
-    border-top: 0;
+    border:none;
     font-size: max(1vw,10px);
     background: black;
     color: white;
+    position: fixed;
+    margin-top: 50px;
+    
 }
 .sidebar-options{
     padding-top: 50px;
