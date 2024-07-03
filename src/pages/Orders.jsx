@@ -35,9 +35,9 @@ const Orders = ({url}) => {
             <div>
             <p className='order-item-map'>{order.items.map((item,index)=>{
   if (index===order.items.length-1) {
-    return item.productId +'x'+item.quantity
+    return item.name +'x'+item.quantity
   } else {
-    return item.productId +'x'+item.quantity+','
+    return item.name+'x'+item.quantity+','
   }
 })}</p>
 
@@ -49,7 +49,7 @@ const Orders = ({url}) => {
 <p className='order-item-phone'>{order.address.phone}</p>
             </div>
             <p>items:{order.items.length}</p>
-            <p>total:${order.amount}</p>
+            <p>total:${(order.amount).toFixed(2)}</p>
             <select onChange={(event)=>statushandler(event,order._id)} value={order.status}>
               <option value='order processing'>order processing</option>
               <option value='shipped'>shipped</option>

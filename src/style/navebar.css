@@ -6,11 +6,17 @@
     background: black;
     position: fixed;
     width: 100%;
+    height: 80px;
+    margin-bottom: 20px;
 }
 .navebar .logo{
-    width: max(10%,80px);
+    margin-top: 20px;
+    width: 60px;
+    border-radius: 50%;
+    margin-bottom: 20px;
 }
 .navebar .profile{
     width: 40px;
     color: white;
+    font-size: xx-large;
 }

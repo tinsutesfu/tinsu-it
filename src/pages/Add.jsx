@@ -24,7 +24,7 @@ const Add = ({url}) => {
     setdata((data) => ({ ...data, ratingstars: newRating }));
   };
 
-  // No separate function needed for count update (explained below)
+
   const handleCountChange = (event) => {
     const newCount = parseInt(event.target.value, 10); // Parse to integer
     if (!isNaN(newCount) && newCount >= 0) { // Validate non-negative number
@@ -86,7 +86,7 @@ toast.error(response.data.message)
             onChange={handleCountChange}
             value={data.ratingcount}
             type="number"
-            name="ratingcount" // Use a more descriptive name
+            name="ratingcount" 
             placeholder="number of ratings"
           />
             </div>
