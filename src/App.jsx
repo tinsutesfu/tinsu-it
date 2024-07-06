@@ -13,7 +13,7 @@ import { Admin } from './pages/Admin';
 
 
 const App = () => {
-  const url='http://localhost:3500';
+  const url='https://back-it-solution.onrender.com';
   return (
     <div>
       <ToastContainer/>
