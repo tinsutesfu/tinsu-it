@@ -1,38 +1,122 @@
-.add{
+.add {
     width: 70%;
-    margin-left: max(5vw,25px);
+    margin-left: max(5vw, 25px);
     margin-top: 80px;
     color: #6d6d6d;
     font-size: 16px;
     margin-left: 250px;
 }
-.add form{
+
+.add form {
     gap: 20px;
 }
-.add-img-upload img{
+
+.add-img-upload img {
     width: 120px;
     height: 50px;
     background: black;
 }
-.add-product-name{
-    width: max(40%,280px);
+
+.add-product-name {
+    width: max(40%, 280px);
 }
-.add-product-name input{
+
+.add-product-name input {
     padding: 10px;
 }
-.add-product-name .rating{
+
+.add-product-name .rating {
     display: flex;
     gap: 30px;
-    
 }
-.add-product-name .rating input{
+
+.add-product-name .rating input {
     width: 175px;
 }
-.add-btn{
+
+.add-btn {
     max-width: 120px;
     border: none;
     padding: 10px;
     background-color: black;
     color: white;
     cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+    .add {
+        margin-left: max(5vw, 25px);
+        width: 80%;
+        margin-left: 5vw;
+    }
+    
+    .add-product-name {
+        width: 100%;
+        margin-bottom: 10px;
+        padding-top: 5px;
+    }
+    
+    .add-product-name .rating {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .add-product-name .rating input {
+        width: 100%;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .add {
+        margin-top: 90px;
+        width: 80%;
+        margin-left: 25vw;
+    }
+    
+    .add-product-name {
+        width: 100%;
+    }
+    
+    .add-product-name .rating {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .add-product-name .rating input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    .add {
+        margin-top: 90px;
+        width: 80%;
+        margin-left: 25vw;
+        padding:  10px;
+    }
+    
+    .add-product-name {
+        width: 100%;
+        padding-top: 5px;
+        margin: 5px;
+    }
+    
+    .add-product-name .rating {
+        flex-direction: column;
+        gap: 6px;
+        padding-top: 5px;
+        margin: 5px;
+    }
+    
+    .add-product-name .rating input {
+        width: 100%;
+        padding: 5px;
+        padding: 5px;
+    }
+    
+    .add-btn {
+        width: 100%;
+    }
 }

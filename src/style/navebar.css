@@ -1,4 +1,4 @@
-.navebar{
+.navebar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,14 +9,66 @@
     height: 80px;
     margin-bottom: 20px;
 }
-.navebar .logo{
+
+.navebar .logo {
     margin-top: 20px;
     width: 60px;
     border-radius: 50%;
     margin-bottom: 20px;
 }
-.navebar .profile{
+
+.navebar .profile {
     width: 40px;
     color: white;
     font-size: xx-large;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+    .navebar {
+       display: flex;
+        height: auto;
+    }
+
+    .navebar .logo {
+        width: 50px;
+        margin: 10px 0;
+    }
+
+    .navebar .profile {
+        font-size: x-large;
+    }
+}
+
+@media (max-width: 600px) {
+    .navebar {
+        display: flex;
+        padding: 8px ;
+    }
+
+    .navebar .logo {
+        width: 40px;
+        margin: 8px 0;
+    }
+
+    .navebar .profile {
+        font-size: large;
+    }
+}
+
+@media (max-width: 375px) {
+    .navebar {
+        display: flex;
+        height: auto;
+        padding: 8px 1%;
+    }
+
+    .navebar .logo {
+        width: 30px;
+        margin: 6px 0;
+    }
+
+    .navebar .profile {
+        font-size: medium;
+    }
 }

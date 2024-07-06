@@ -40,10 +40,10 @@ const response=await axios.post(`${url}/api/it/remove`,{id:itId})
             return(
               <div key={index} className="list-table-format">
                <img src={`${url}/images/`+item.image}/>
-               <p>{item.name}</p>
-               <p>{item.ratingstars}</p>
-               <p>{item.ratingcount}</p>
-               <p>{item.priceCents}</p>
+               <p className='name'>{item.name}</p>
+               <p className='para'>{item.ratingstars}</p>
+               <p className='para'>{item.ratingcount}</p>
+               <p className='para'>${(item.priceCents)/100}</p>
                <p className='cursor' onClick={()=>removeit(item._id)}>x</p>
               </div>
             )
