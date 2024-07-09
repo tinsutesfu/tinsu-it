@@ -39,7 +39,7 @@ const response=await axios.post(`${url}/api/it/remove`,{id:itId})
           list.map((item,index)=>{
             return(
               <div key={index} className="list-table-format">
-               <img src={`${url}/images/`+item.image}/>
+               <img src={`/uploads/${item.image}`}/>
                <p className='name'>{item.name}</p>
                <p className='para'>{item.ratingstars}</p>
                <p className='para'>{item.ratingcount}</p>
