@@ -11,7 +11,7 @@ import "./style/admin.css";
 import { Admin } from "./pages/Admin";
 
 const App = () => {
-  const url = "https://front-it-solution.onrender.com";
+  const url = "https://back-it-solution.onrender.com";
   return (
     <div>
       <ToastContainer />
